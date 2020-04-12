@@ -2,7 +2,7 @@
   "name": "Rick and Morty API",
   "short_name": "svelte site",
   "description": "A simple Rick and Morty API example with Svelte.",
-  "start_url": "/svelte-rick-and-morty/",
+  "start_url": "https://dcyar.github.io/svelte-rick-and-morty/",
   "background_color": "#000000",
   "theme_color": "#0f4a73",
   "icons": [{
