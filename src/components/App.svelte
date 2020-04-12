@@ -1,8 +1,9 @@
 <script>
-	import { Router, Link, Route } from 'svelte-routing';
+	import { Router, link, Route } from 'svelte-routing';
 	import Library from './Library.svelte';
 	import Character from './Character.svelte';
 	import About from './About.svelte';
+	import Footer from './Footer.svelte';
 
 	let url = '';
 </script>
@@ -11,9 +12,9 @@
 	<h1>Rick and Morty API!</h1>
   <p class="subtitle">This is an example with Svelte and Rick and Morty API</p>
 	<Router url={ url }>
-		<nav>
-			<Link to="/">Home</Link>
-			<Link to="about">About</Link>
+		<nav class="navbar">
+			<a href="/" use:link class="link">Home</a>
+			<a href="about" use:link class="link">About</a>
 		</nav>
 		<div class="container">
 			<Route path="/" component="{Library}"></Route>
@@ -23,14 +24,31 @@
 			<Route path="about" component="{About}"></Route>
 		</div>
 	</Router>
+	<Footer />
 </main>
 
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
+	}
+
+	main h1 {
+		text-shadow: 2px 2px 1px rgba(51, 51, 51, 0.5);
+	}
+
+	.navbar {
+		margin: 30px auto;
+	}
+
+	.navbar .link{
+		border: 1px solid #ff3e00;
+		padding: 5px;
+		margin: 0 5px;
+		text-transform: uppercase;
+		color: #b43206;
+		text-decoration: none;
+		font-weight: bold;
 	}
 
 	h1 {
@@ -41,8 +59,8 @@
 	}
 
   .container {
-    width: 90vw;
-    margin: 20px auto;
+		margin: 20px auto;
+		width: 90vw;
     text-align: center;
   }
 

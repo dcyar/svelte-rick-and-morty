@@ -17,10 +17,17 @@
 
 <style type="text/css">
   .character {
-    width: 250px;
+    width: 100%;
   }
 
   .character img {
     width: 100%;
+  }
+
+  .character figcaption {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #ff3e00;
   }
 </style>

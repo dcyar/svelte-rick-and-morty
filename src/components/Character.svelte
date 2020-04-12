@@ -18,11 +18,11 @@
       <div class="aside">
         <figure class="picture">
           <img src={ character.image } alt={ character.name } />
-          <figcaption>{ character.gender }</figcaption>
         </figure>
       </div>
       <div class="description">
         <h1>{ character.name }</h1>
+        <p><strong>Gender: </strong>{ character.gender }</p>
         <p><strong>Status: </strong>{ character.status }</p>
         <p><strong>Specie: </strong>{ character.species }</p>
         <p><strong>Origin: </strong>{ character.origin.name }</p>
@@ -37,25 +37,34 @@
 
 <style type="text/css">
   .character {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 20px;
   }
 
-  .aside {
-    width: 30%;
-    text-align: center;
-  }
-
-  .picture {
-    width: 200px;
-  }
-
-  .picture img {
+  .aside .picture img {
     width: 100%;
   }
 
   .description {
-    width: 70%;
     text-align: left;
   }
+
+  .description h1 {
+    margin-top: 0;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px #ff3e00;
+  }
+
+  @media (max-width: 980px) {
+		.character {
+			grid-template-columns: repeat(2, 1fr);
+		}
+  }
+
+  @media (max-width: 700px) {
+		.character {
+			grid-template-columns: 1fr;
+		}
+	}
 </style>
