@@ -13,15 +13,15 @@
   <p class="subtitle">This is an example with Svelte and Rick and Morty API</p>
 	<Router url={ url }>
 		<nav class="navbar">
-			<a href="/" use:link class="link">Home</a>
-			<a href="about" use:link class="link">About</a>
+			<a href="./" use:link class="link">Home</a>
+			<a href="./about" use:link class="link">About</a>
 		</nav>
 		<div class="container">
-			<Route path="/" component="{Library}"></Route>
-			<Route path="character/:id" let:params>
+			<Route path="./" component="{Library}"></Route>
+			<Route path="./character/:id" let:params>
 				<Character id={ params.id } />
 			</Route>
-			<Route path="about" component="{About}"></Route>
+			<Route path="./about" component="{About}"></Route>
 		</div>
 	</Router>
 	<Footer />

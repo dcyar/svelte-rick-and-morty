@@ -7,7 +7,7 @@
 </script>
 
 <div class="character">
-  <Link to="character/{character.id}">
+  <Link to="./character/{character.id}">
     <figure>
       <img src={ character.image } alt={ character.name } />
       <figcaption>{ character.name }</figcaption>
