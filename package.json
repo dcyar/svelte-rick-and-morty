@@ -1,11 +1,27 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "author": "JhOn Achata Limachi <jhonal183@gmail.com>",
+  "description": "A basic Rick and Morty API",
+  "homepage": "https://dcyar.github.io/svelte-rick-and-morty/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcyar/svelte-rick-and-morty.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dcyar/svelte-rick-and-morty/issues"
+  },
+  "keywords": [
+    "Javascript",
+    "Svelte",
+    "api"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "deploy": "yarn build && gh-pages -d public"
+    "deploy": "yarn build && gh-pages -d public -b master"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
