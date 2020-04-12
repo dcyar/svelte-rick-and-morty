@@ -1,5 +1,5 @@
 <div class="about">
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum autem architecto sit molestiae, delectus magni tempora fuga, quos quis obcaecati esse eaque numquam ea, saepe cumque placeat. Doloremque, aspernatur quia!</p>
+  <p>Made with <strong>Svelte</strong> by <strong>@dcyar</strong></p>
 </div>
 
 <style type="text/css">
